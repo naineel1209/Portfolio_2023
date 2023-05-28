@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+    html {
+        font-family: 'Work Sans', sans-serif;
+    }
+}
+
+.sign {
+    font-family: 'Dancing Script', cursive;
+}
+
+.show-desc {
+    opacity: 1;
+    height: auto;
+    max-height: 100%;
+    /* Set a maximum height to allow smooth animation */
+    transition: max-height 1s ease;
+    overflow: hidden;
+}
+
+.hide-desc {
+    visibility: hidden;
+    height: 0;
+    max-height: 0;
+    transition: max-height 1s ease;
+    overflow: hidden;
+}
+
+.tilt {
+    width: max-content;
+}
+
+.arrow {
+    transition: transform 0.5s ease;
+    transform: translateY(0);
+}
+
+.arrow:hover {
+    transition: transform 0.5s ease;
+    animation: jump 0.5s ease alternate infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+div {
+    transition: height 0.3s;
+    /* Adds a smooth transition effect */
+}
+
+textarea {
+    resize: none;
+}
