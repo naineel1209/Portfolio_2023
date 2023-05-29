@@ -34,13 +34,13 @@ const SocialLinks = () => {
     ]
 
     return (
-        <div className='z-50 hidden md:flex top-[35%] hover:ml-[0] ml-[-110px] left-0 duration-200 text-3xl text-white fixed md:text-xl'>
+        <div className='z-50 hidden md:flex top-[35%] hover:ml-[-10px] ml-[-110px] duration-500 text-3xl text-white fixed md:text-xl'>
             {/* <FaFacebookSquare className=' hover:scale-110 duration-150 hover:left-[2%]' /> */}
 
             <ul>
                 {
                     socialsArr.map(link => {
-                        return <LiLet key={link.id} link={link} />
+                        return <LiLet key={link.id} link={link} className='flex justify-center items-center w-full h-14 hover:rounded-md bg-gray-500 px-4 my-2' />
                     })
                 }
             </ul>
@@ -50,7 +50,7 @@ const SocialLinks = () => {
 
 
 function LiLet({ link }) {
-    return (<li className='flex justify-between items-center w-100 h-14 duration-200 hover:rounded-md bg-gray-500 px-4 my-2'>
+    return (<li className='flex justify-center items-center w-full h-14 hover:rounded-md bg-gray-500 px-4 my-2'>
 
         <a className='flex flex-row justify-between w-full items-center gap-5 duration-200 hover:animate-pulse' href={link.url} download={link.download || false} target="_blank" rel="noreferrer"><span>{link.text}</span> <span>{link.icon}</span></a>
 

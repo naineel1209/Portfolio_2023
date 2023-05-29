@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaFacebook, FaInstagramSquare, FaLinkedinIn, FaTimes, FaTwitter } from 'react-icons/fa';
+import { FaBars, FaGithub, FaInstagramSquare, FaLinkedinIn, FaTimes, FaTwitter } from 'react-icons/fa';
 import img from '../assets/android-chrome-192x192.png';
 
 import { Link } from 'react-scroll';
@@ -107,10 +107,10 @@ function NavBar() {
                 }
 
                 <div className='absolute bottom-10 flex flex-row gap-5'>
-                    <a href="https://www.instagram.com" target='_blank' rel="noreferrer"><FaInstagramSquare className='hover:scale-110 duration-200 text-3xl cursor-pointer hover:text-red-400' href='https://nigger.com' /></a>
-                    <a href='https://www.facebook.com' target='_blank' rel="noreferrer"><FaFacebook className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
-                    <a href='https://www.twitter.com' target='_blank' rel="noreferrer"><FaTwitter className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
-                    <a href='https://www.linkedin.com' target='_blank' rel="noreferrer"><FaLinkedinIn className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
+                    <a href="https://www.instagram.com/_naineel/" target='_blank' rel="noreferrer"><FaInstagramSquare className='hover:scale-110 duration-200 text-3xl cursor-pointer' href='https://nigger.com' /></a>
+                    <a href='https://github.com/naineel1209' target='_blank' rel="noreferrer"><FaGithub className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
+                    <a href='https://twitter.com/' target='_blank' rel="noreferrer"><FaTwitter className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
+                    <a href='https://www.linkedin.com/in/naineel-soyantar-3b1b371b7/' target='_blank' rel="noreferrer"><FaLinkedinIn className='hover:scale-110 duration-200 text-3xl cursor-pointer' /></a>
                 </div>
             </ul>
         </div >
