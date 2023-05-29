@@ -7,7 +7,6 @@ import { Link } from 'react-scroll'
 import HeroImage from '../assets/zed-1.jpeg'
 
 const Home = () => {
-    scrollingFunc()
     return (<div name="home" className='w-full bg-gradient-to-b from-black to-gray-800'>
 
 

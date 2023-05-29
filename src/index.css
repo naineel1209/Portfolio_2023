@@ -81,3 +81,8 @@ textarea {
 .magic:hover>* {
     transform: translateZ(100px);
 }
+
+html::selection {
+    background-color: rgb(103, 255, 103);
+    color: white;
+}

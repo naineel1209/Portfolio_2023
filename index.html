@@ -11,6 +11,80 @@
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
+  <script defer>
+    {
+      const wordArr = ["Naineel Soyantar", "a Full Stack Developer", "a Student", "a Learner", "a Cinephile"]
+
+      let i = 0, j = 0, n = wordArr.length
+
+      let overStep = false, count = 0
+
+      var animationID
+
+      let scrolling
+
+      function changeWords(timestamp) {
+        if (timestamp && timestamp - previousTimestamp < 300) {
+          animationID = requestAnimationFrame(changeWords)
+          return
+        }
+
+        previousTimestamp = timestamp
+
+        if (!overStep && j < wordArr[i].length) {
+
+          scrolling.innerHTML += wordArr[i % n][j++]
+          // console.log('started')
+
+        } else if (!overStep && j === wordArr[i].length) {
+
+          overStep = true
+          scrolling.innerHTML = wordArr[i % n].substring(0, j--)
+
+        } else if (overStep && j < wordArr[i].length && j > 0) {
+
+          scrolling.innerHTML = wordArr[i % n].substring(0, j--)
+          // console.log('started')
+
+        }
+        else if (overStep && j === 0) {
+
+          overStep = false
+          scrolling.innerHTML = ''
+          i = (i + 1) % n
+
+        }
+
+        count++
+
+        if (count === 2000) {
+          cancelAnimationFrame(animationID)
+          i = 0
+          scrolling.innerHTML = wordArr[i % n]
+        }
+
+        animationID = requestAnimationFrame(changeWords)
+      }
+
+      let previousTimestamp = 0
+
+      window.addEventListener('DOMContentLoaded', (e) => {
+        scrolling = document.querySelector('.scrolling')
+        animationID = requestAnimationFrame(changeWords)
+      })
+
+      // if (document.readyState === "complete") {
+      //     scrolling = document.querySelector('.scrolling')
+      //     animationID = requestAnimationFrame(changeWords)
+
+      //     console.log('hello')
+      // } else {
+      //     scrolling = document.querySelector('.scrolling')
+      //     animationID = requestAnimationFrame(changeWords)
+      //     console.log('hello from 2')
+      // }
+    }
+  </script>
 </body>
 
 </html>
