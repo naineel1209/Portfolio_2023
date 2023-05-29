@@ -65,7 +65,7 @@ const Skills = () => {
                     {
                         skillsList.map((skill, index) => {
                             return (
-                                <Tilt key={index} className='w-full h-full shadow-md shadow-slate-200/40 p-5 hover:border-4 hover:border-gray-500 rounded-lg duration-200 flex flex-col justify-center items-center gap-2 hover:bg-white group'>
+                                <Tilt key={index} className='w-full h-full shadow-md shadow-slate-200/40 p-5 border-4-white border-gray-500 rounded-lg duration-200 flex flex-col justify-center items-center gap-2 hover:bg-white group magic'>
                                     <img src={skill.icon} />
                                     <p className='duration-200 group-hover:text-black'>{skill.name}</p>
                                 </Tilt>

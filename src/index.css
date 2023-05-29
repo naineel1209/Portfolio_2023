@@ -73,3 +73,11 @@ div {
 textarea {
     resize: none;
 }
+
+.magic>* {
+    transform: translateZ(0);
+}
+
+.magic:hover>* {
+    transform: translateZ(100px);
+}
