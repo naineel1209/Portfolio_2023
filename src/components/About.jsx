@@ -7,7 +7,7 @@ const About = () => {
 
                 <div className='mx-1 text-xl text-gray-500 text-justify'>
                     <p className='mt-10 mx-auto'>
-                        Greetings! I'm Naineel Soyantar, a 20-year-old web developer currently pursuing my studies at LD College of Engineering.
+                        Greetings! I'm Naineel Soyantar, a 20-year-old web developer currently pursuing my studies in Computer Engineering at LD College of Engineering.
                     </p>
                     <br />
                     <p>

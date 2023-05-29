@@ -90,8 +90,19 @@ function scrollingFunc() {
 
     let previousTimestamp = 0
 
-    window.addEventListener('load', (e) => {
+    window.addEventListener('DOMContentLoaded', (e) => {
         scrolling = document.querySelector('.scrolling')
         animationID = requestAnimationFrame(changeWords)
     })
+
+    // if (document.readyState === "complete") {
+    //     scrolling = document.querySelector('.scrolling')
+    //     animationID = requestAnimationFrame(changeWords)
+
+    //     console.log('hello')
+    // } else {
+    //     scrolling = document.querySelector('.scrolling')
+    //     animationID = requestAnimationFrame(changeWords)
+    //     console.log('hello from 2')
+    // }
 }
