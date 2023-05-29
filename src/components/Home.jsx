@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { FaArrowAltCircleDown, FaArrowAltCircleLeft, FaArrowAltCircleRight, FaRegArrowAltCircleLeft } from 'react-icons/fa'
 import { HiArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-scroll'
 import HeroImage from '../assets/zed-1.jpeg'
 
 const Home = () => {
+    useEffect(() => {
+        scrollingFunc();
+    }, []);
+
     return (<div name="home" className='w-full bg-gradient-to-b from-black to-gray-800'>
 
 
@@ -89,10 +93,8 @@ function scrollingFunc() {
 
     let previousTimestamp = 0
 
-    window.addEventListener('DOMContentLoaded', (e) => {
-        scrolling = document.querySelector('.scrolling')
-        animationID = requestAnimationFrame(changeWords)
-    })
+    scrolling = document.querySelector('.scrolling')
+    animationID = requestAnimationFrame(changeWords)
 
     // if (document.readyState === "complete") {
     //     scrolling = document.querySelector('.scrolling')

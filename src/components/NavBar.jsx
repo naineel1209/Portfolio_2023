@@ -49,7 +49,7 @@ function NavBar() {
     const [showMenu, setShowMenu] = useState(false);
 
     const liClick = (e) => {
-        console.log(e.target.id);
+        // console.log(e.target.id);
         setCurrent(menuItems[e.target.id].label);
         setShowMenu(false);
     }
